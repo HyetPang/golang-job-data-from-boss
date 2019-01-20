@@ -3,20 +3,20 @@ package model
 import "strings"
 
 type ZhipinData struct {
-	Category          string `json:"category",gorm:"Column:category"`
-	City              string `json:"city",gorm:"Column:city"`
-	Education         string `json:"education",gorm:"Column:education"`
-	EnterpriseAddress string `json:"enterpriseAddress",gorm:"Column:enterprise_address"`
-	EnterpriseName    string `json:"enterpriseName",gorm:"Column:enterprise_name"`
-	EnterpriseScale   string `json:"enterpriseScale",gorm:"Column:enterprise_scale"`
-	HrHeadImg         string `json:"hrHeadImg",gorm:"Column:hr_headImg"`
-	HrNickname        string `json:"hrNickname",gorm:"Column:hr_nickname"`
-	Id                string `json:"id",gorm:"Column:id"`
-	JobDetails        string `json:"jobDetails",gorm:"Column:job_details"`
-	JobName           string `json:"jobName",gorm:"Column:job_name"`
-	JobTags           string `json:"jobTags",gorm:"Column:job_tags"`
-	SalaryRange       string `json:"salaryRange",gorm:"Column:salary_range"`
-	WorkYears         string `json:"workYears",gorm:"Column:work_years"`
+	Id                string `json:"id",gorm:"id"`
+	EnterpriseName    string `json:"enterpriseName",gorm:"enterprise_name"`
+	EnterpriseScale   string `json:"enterpriseScale",gorm:"enterprise_scale"`
+	EnterpriseAddress string `json:"enterpriseAddress",gorm:"enterprise_address"`
+	WorkYears         string `json:"workYears",gorm:"work_years"`
+	SalaryRange       string `json:"salaryRange",gorm:"salary_range"`
+	Category          string `json:"category",gorm:"category"`
+	Education         string `json:"education",gorm:"education"`
+	JobName           string `json:"jobName",gorm:"job_name"`
+	JobDetails        string `json:"jobDetails",gorm:"job_details"`
+	HrNickname        string `json:"hrNickname",gorm:"hr_nickname"`
+	HrHeadImg         string `json:"hrHeadImg",gorm:"hr_head_img"`
+	City              string `json:"city",gorm:"city"`
+	JobTags           string `json:"jobTags",gorm:"job_tags"`
 }
 
 func (ZhipinData) TableName() string {
